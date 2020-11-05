@@ -1,0 +1,91 @@
+@startuml
+'worked with Bradley WindyBank on UML Diagram'
+' style tweaks to make the diagram a little more readable
+skinparam {
+	Style strictuml
+	RoundCorner 8
+
+	Sequence {
+		' make activations yellow too
+		LifeLineBackgroundColor #FDFDCD
+
+		' make stereotypes less ugly
+		Stereotype {
+			Font {
+				Size 11
+				Style plain
+			}
+		}
+	}
+
+	DatabaseBorderColor #A80036
+
+}
+
+title Online Shop
+
+
+actor User as user
+participant "Website" as website <<HTML and JS>>
+
+
+participant "Product Controller" as ctrl <<AngularJS Controller>>
+
+participant "Product Module" as module <<Jooby Module>>
+participant "ProductDatabaseDao" as dao <<ProductDataInterface>>
+participant "Server" as server <<Jooby Server>>
+database "Database" as db
+
+server++
+website ++
+
+create dao
+server -> dao : « construct »
+
+create module
+server -> module : « construct »
+
+user ->> website : clicks 'View Products'
+website -> website : Redirect to product page
+create ctrl
+website -> ctrl : « construct »
+website -> ctrl++ : Request Categories
+ctrl -> module++ : Request resources at /api/categories
+module -> dao++ : getCategoryList()
+dao -> db++ : select distinct category from product
+
+db --> dao-- : return categories:Collection<string>
+dao --> module-- : return categories:Collection<string>
+module --> ctrl-- : return categories:Collection<string>
+ctrl--
+
+loop for category in prodCtrl.categories
+    website -> ctrl++ : category in categories
+    ctrl --> website-- : return category
+
+    website -> website : create button for category
+
+end
+
+website -> ctrl++ : Request Products
+ctrl -> module++ : Request resources at /api/products
+module -> dao++ : getProductList()
+dao -> db++ : select * from product order by product_id
+
+db --> dao-- : return products:Collection<Product>
+dao --> module-- : return products:Collection<Product>
+module --> ctrl-- : return products:Collection<Product>
+ctrl--
+
+loop for category in prodCtrl.products
+    website -> ctrl++ : product in products
+    ctrl --> website-- : return product
+
+    website -> website : create table row for product
+
+end
+
+
+
+
+@enduml

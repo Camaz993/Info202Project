@@ -1,0 +1,50 @@
+html{
+    background-color: #2a5298;
+    color:black;
+    background-repeat: no-repeat;
+}
+
+body{
+    width:1200px;
+    margin:auto;
+    color: #005;
+    background-color:white;
+    font-family: Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+header{
+    background-color:#4A86E8;
+    color:#ffffff;
+}
+
+h1{ color: #111;
+     font-family: 'Open Sans Condensed', sans-serif;
+     font-size: 64px; 
+     font-weight: 700;
+     line-height: 64px;
+     margin: 0 0 0; 
+     padding: 20px 30px;
+     text-align: center; 
+     text-transform: uppercase; 
+}
+
+form{
+    margin-left:10px;
+}
+
+.hidden {
+    display: none;	
+}
+
+legend {
+    color: #2AABE2;
+    background-color: inherit;
+    font-size: 20px;
+    font-weight: bold;
+    padding-top:20px;
+}
+
+form ul {
+    list-style-type: none;
+}

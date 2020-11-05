@@ -1,0 +1,89 @@
+@startuml
+'worked with Bradley WindyBank on UML Diagrams'
+'Also Sourced from reference document'
+' style tweaks to make the diagram a little more readable
+skinparam {
+	Style strictuml
+	RoundCorner 8
+
+	Sequence {
+		' make activations yellow too
+		LifeLineBackgroundColor #FDFDCD
+
+		' make stereotypes less ugly
+		Stereotype {
+			Font {
+				Size 11
+				Style plain
+			}
+		}
+	}
+
+	DatabaseBorderColor #A80036
+
+}
+
+title Search Products (using DB dao)
+
+actor User as user
+participant "Administration" as main << main >>
+participant "MainMenu" as menu << frame >>
+participant "ProductReportDialog" as dialog << dialog >>
+participant "ProductDatabaseDAO" as dao << ProductDAO >>
+participant "SimpleListModel\n:model" as model
+database "Database" as db
+
+main++
+create menu
+main -> menu : « construct »
+
+
+user ->> menu : clicks 'View Products'
+menu++
+
+
+create dialog
+menu -> dialog++ : « construct »
+
+
+create dao
+dialog -> dao : « construct »
+
+dialog -> dao++ : getProducts()
+dao -> db++ : select * from product
+return ResultSet
+dao -> dao : reconstruct products\nfrom ResultSet
+return products
+
+create model
+dialog -> model : « construct »
+dialog -> model++ : updateItems(products)
+model--
+dialog -> dialog-- : lstProducts.setModel(model)
+
+note left : products now\nvisible to user
+
+user -> dialog++ : search for product using id
+
+opt if txtIDSearch value is not null
+dialog -> dialog : txtIDSearch.getValue()
+dialog -> dao++ : productSearch(id)
+
+dao -> db++ : select * from product
+return ResultSet
+dao -> dao : construct product\nfrom ResultSet
+
+return product
+dialog -> model++ : updateItems(product)
+model--
+dialog -> dialog-- : lstProducts.setModel(model)
+
+note left : product now\nvisible to user if exists
+
+else No value entered
+dialog -> dialog++ : alert the user\nthat no value was entered
+dialog--
+
+end
+
+@enduml

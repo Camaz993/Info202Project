@@ -1,0 +1,49 @@
+'worked with Bradley WindyBank on UML Diagrams'
+'Also Sourced from reference document'
+
+@startuml
+' use strict UML mode
+skinparam style strictuml
+ 
+actor "User" as user
+ 
+participant "Administration" as main <<main>>
+main++
+ 
+create "MainMenu" as menu <<frame>>
+main -> menu : construct
+ 
+main -> menu++ : setVisible(true)
+user -> menu : click 'add Product' button
+ 
+create "ProductEditor" as editor <<dialog>>
+menu -> editor : construct
+ 
+' activate editor constructor
+menu -> editor++ : setVisible(true)
+ 
+' create a DAO
+create "ProductDAO" as dao <<DAO>>
+editor -> dao : construct
+ 
+' user enters product details and clicks the save button
+user -> editor : enters product details
+ 
+user -> editor : clicks save button
+ 
+' get the details from the relevant text components
+editor -> editor : get details from input
+ 
+create "Product : product" as product <<domain>>
+editor -> product++ : construct with details
+ 
+editor -> dao++ : add(product)
+ 
+ 
+'dispose dialog
+user -> editor : clicks cancel button
+editor -> editor : dispose()
+ 
+destroy editor
+ 
+@enduml

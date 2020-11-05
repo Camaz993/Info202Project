@@ -1,0 +1,38 @@
+'worked with Bradley WindyBank on UML Diagrams'
+'Also Sourced from reference document'
+
+@startuml
+' use strict UML mode
+skinparam style strictuml
+ 
+actor "User" as user
+ 
+participant "Administration" as main <<main>>
+main++
+ 
+create "MainMenu" as menu <<frame>>
+main -> menu : construct
+ 
+main -> menu++ : setVisible(true)
+user -> menu : "click view products" button
+ 
+create "ProductReport" as report <<dialog>>
+menu -> report : construct
+ 
+' activate report constructor
+menu -> report++ : setVisible(true)
+ 
+' create a DAO
+participant "ProductDAO" as dao <<DAO>>
+dao++
+report -> dao : Get Products List
+'returns
+dao -> report : Return Categories
+report -> report : setModel(myModel)
+
+'dispose dialog
+user -> report : click Exit button
+report -> report :dispose()
+destroy report
+ 
+@enduml

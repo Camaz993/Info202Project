@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+        <div id="menu" ng-controller="CustomerController as custCtrl" ng-init="custCtrl.checkSignIn()">
+            <div id="welcome">{{custCtrl.welcome}}</div>
+            <a href=".">Home</a>
+            <a href="view_products.html" ng-if="custCtrl.signedIn">Browse Products</a>
+            <a href="cart.html" ng-if="custCtrl.signedIn">View Cart</a>
+            <a href="#" ng-if="custCtrl.signedIn" ng-click="custCtrl.signOut()">Sign Out</a>
+            <a href="sign_in.html" ng-if="!custCtrl.signedIn">Sign In</a>
+        </div>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="ShoppingApp">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/angular.min.js"></script>
+        <script src="js/angular-resource.min.js"></script>
+        <script src="js/ngStorage.min.js"></script>
+        <script src="js/shopping.js"></script>
+        <link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+    </head>
+    <body ng-controller="CartController as cartCtrl">     
+<div ng-include="'menu.html'" ></div>
+        <h1>How man do you want to buy?</h1>
+        <table>
+            <tbody>
+                <tr>
+                    <th>ID:</th>
+                    <td>{{cartCtrl.selectedProduct.product_Id}}</td>
+                </tr>
+                <tr>
+                    <th>Name:</th>
+                    <td>{{cartCtrl.selectedProduct.name}}</td>
+                </tr>
+                <tr>
+                    <th>Description:</th>
+                    <td>{{cartCtrl.selectedProduct.description}}</td>
+                </tr>
+                <tr>
+                    <th>Price:</th>
+                    <td>{{cartCtrl.selectedProduct.list_price}}</td>
+                </tr>
+                <tr>
+                    <th>Quantity Avaliable:</th>
+                    <td>{{cartCtrl.selectedProduct.stock}}</td>
+                </tr>
+            </tbody>
+        </table>
+                <form>
+            <fieldset>
+                <legend>Quantity to buy</legend>
+                <label for="quanitity">How Many?:</label>
+                <input id="quanitity" type="text" ng-model="stock">
+                <button ng-click="cartCtrl.addtoCart(stock)">Add To Cart</button>
+            </fieldset>
+        </form>
+    </body>
+</html>

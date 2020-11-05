@@ -1,0 +1,90 @@
+@startuml
+'worked with Bradley WindyBank on UML Diagrams'
+'Also Sourced from reference document'
+' style tweaks to make the diagram a little more readable
+skinparam {
+	Style strictuml
+	RoundCorner 8
+ 
+	Sequence {
+		' make activations yellow too
+		LifeLineBackgroundColor #FDFDCD
+ 
+		' make stereotypes less ugly
+		Stereotype {
+			Font {
+				Size 11
+				Style plain
+			}
+  
+		}
+	}
+ 
+	DatabaseBorderColor #A80036
+ 
+}
+ 
+title Delete Products
+ 
+actor User as user
+participant "Main" as main << main >>
+participant "MainMenu" as menu << frame >>
+participant "ProductReportDialog" as report << dialog >>
+participant "ProductDatabaseDAO" as dao << DAO >>
+participant "SimpleListModel\n:model" as model
+database "Database" as db
+ 
+create menu
+main -> menu : « create »
+ 
+user -> menu : clicks 'View Products'
+activate menu
+ 
+create report
+menu -> report : « create »
+ 
+activate report
+create dao
+report -> dao: « create »
+ 
+ 
+note over report: as shown in\n'View Products'\ndiagram
+user <-- report : list of products displayed
+ 
+deactivate report
+ 
+user -> report++ : selects a product in the list
+report--
+ 
+user -> report : clicks 'Delete' button
+
+opt if selection is not empty
+activate report
+
+report -> report : jList.getSelectedValue() : product
+
+report --> user: JOptionPane appears for user
+
+user -> report: User clicks 'yes'
+report -> dao++ : dao.delete(product)
+dao -> db ++ : "delete from Product where id =?"
+
+report -> dao : getProducts()
+dao -> db : "select * from product order by id"
+return products 
+
+dao -> dao : Construct Collection<Product>
+return dao returns collection
+
+create model
+report -> model : « construct »
+report -> model++ : updateItems(products)
+model--
+ 
+report -> report-- : productsModel.updateItems(products)
+note left: updated product\ndisplayed in report
+else No Product selected
+report -> report++ : Alert That Nothing Was Selected
+report --
+end 
+@enduml

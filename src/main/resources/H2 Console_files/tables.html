@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0075)http://localhost:8082/tables.do?jsessionid=92d47a804074b86b30ae2d691dccac2e -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>H2 Console</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css">
+    <script type="text/javascript" src="./tree.js"></script>
+<script type="text/javascript">
+<!--
+setNode(0, 0, 0, 'database', 'jdbc:h2:tcp://localhost:9092/project', null);
+setNode(1, 0, 1,  'table', 'PRODUCT', 'javascript:ins(\'PRODUCT\',true)');
+setNode(2, 1, 1, 'column', 'ID', 'javascript:ins(\'ID\')');
+setNode(3, 2, 2, 'type', 'INTEGER(10) NOT NULL', null);
+setNode(4, 1, 1, 'column', 'NAME', 'javascript:ins(\'NAME\')');
+setNode(5, 2, 2, 'type', 'VARCHAR(50) NOT NULL', null);
+setNode(6, 1, 1, 'column', 'DESCRIPTION', 'javascript:ins(\'DESCRIPTION\')');
+setNode(7, 2, 2, 'type', 'VARCHAR(100) NOT NULL', null);
+setNode(8, 1, 1, 'column', 'PRICE', 'javascript:ins(\'PRICE\')');
+setNode(9, 2, 2, 'type', 'DECIMAL(10, 2) NOT NULL', null);
+setNode(10, 1, 1, 'column', 'STOCK', 'javascript:ins(\'STOCK\')');
+setNode(11, 2, 2, 'type', 'INTEGER(10) NOT NULL', null);
+setNode(12, 1, 1, 'column', 'CATEGORIES', 'javascript:ins(\'CATEGORIES\')');
+setNode(13, 2, 2, 'type', 'VARCHAR(50) NOT NULL', null);
+setNode(14, 1, 1, 'index_az', 'Indexes', null);
+setNode(15, 2, 1, 'index', 'PRIMARY_KEY_E', null);
+setNode(16, 3, 2, 'type', 'Unique', null);
+setNode(17, 3, 2, 'type', 'ID', null);
+addTable('PRODUCT', 'ID NAME DESCRIPTION PRICE STOCK CATEGORIES', 1);
+setNode(18, 0, 1, 'folder', 'INFORMATION_SCHEMA', null);
+setNode(19, 1, 2,  'table', 'CATALOGS', 'javascript:ins(\'INFORMATION_SCHEMA.CATALOGS\',true)');
+setNode(20, 1, 2,  'table', 'COLLATIONS', 'javascript:ins(\'INFORMATION_SCHEMA.COLLATIONS\',true)');
+setNode(21, 1, 2,  'table', 'COLUMNS', 'javascript:ins(\'INFORMATION_SCHEMA.COLUMNS\',true)');
+setNode(22, 1, 2,  'table', 'COLUMN_PRIVILEGES', 'javascript:ins(\'INFORMATION_SCHEMA.COLUMN_PRIVILEGES\',true)');
+setNode(23, 1, 2,  'table', 'CONSTANTS', 'javascript:ins(\'INFORMATION_SCHEMA.CONSTANTS\',true)');
+setNode(24, 1, 2,  'table', 'CONSTRAINTS', 'javascript:ins(\'INFORMATION_SCHEMA.CONSTRAINTS\',true)');
+setNode(25, 1, 2,  'table', 'CROSS_REFERENCES', 'javascript:ins(\'INFORMATION_SCHEMA.CROSS_REFERENCES\',true)');
+setNode(26, 1, 2,  'table', 'DOMAINS', 'javascript:ins(\'INFORMATION_SCHEMA.DOMAINS\',true)');
+setNode(27, 1, 2,  'table', 'FUNCTION_ALIASES', 'javascript:ins(\'INFORMATION_SCHEMA.FUNCTION_ALIASES\',true)');
+setNode(28, 1, 2,  'table', 'FUNCTION_COLUMNS', 'javascript:ins(\'INFORMATION_SCHEMA.FUNCTION_COLUMNS\',true)');
+setNode(29, 1, 2,  'table', 'HELP', 'javascript:ins(\'INFORMATION_SCHEMA.HELP\',true)');
+setNode(30, 1, 2,  'table', 'INDEXES', 'javascript:ins(\'INFORMATION_SCHEMA.INDEXES\',true)');
+setNode(31, 1, 2,  'table', 'IN_DOUBT', 'javascript:ins(\'INFORMATION_SCHEMA.IN_DOUBT\',true)');
+setNode(32, 1, 2,  'table', 'KEY_COLUMN_USAGE', 'javascript:ins(\'INFORMATION_SCHEMA.KEY_COLUMN_USAGE\',true)');
+setNode(33, 1, 2,  'table', 'LOCKS', 'javascript:ins(\'INFORMATION_SCHEMA.LOCKS\',true)');
+setNode(34, 1, 2,  'table', 'QUERY_STATISTICS', 'javascript:ins(\'INFORMATION_SCHEMA.QUERY_STATISTICS\',true)');
+setNode(35, 1, 2,  'table', 'REFERENTIAL_CONSTRAINTS', 'javascript:ins(\'INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS\',true)');
+setNode(36, 1, 2,  'table', 'RIGHTS', 'javascript:ins(\'INFORMATION_SCHEMA.RIGHTS\',true)');
+setNode(37, 1, 2,  'table', 'ROLES', 'javascript:ins(\'INFORMATION_SCHEMA.ROLES\',true)');
+setNode(38, 1, 2,  'table', 'SCHEMATA', 'javascript:ins(\'INFORMATION_SCHEMA.SCHEMATA\',true)');
+setNode(39, 1, 2,  'table', 'SEQUENCES', 'javascript:ins(\'INFORMATION_SCHEMA.SEQUENCES\',true)');
+setNode(40, 1, 2,  'table', 'SESSIONS', 'javascript:ins(\'INFORMATION_SCHEMA.SESSIONS\',true)');
+setNode(41, 1, 2,  'table', 'SESSION_STATE', 'javascript:ins(\'INFORMATION_SCHEMA.SESSION_STATE\',true)');
+setNode(42, 1, 2,  'table', 'SETTINGS', 'javascript:ins(\'INFORMATION_SCHEMA.SETTINGS\',true)');
+setNode(43, 1, 2,  'table', 'SYNONYMS', 'javascript:ins(\'INFORMATION_SCHEMA.SYNONYMS\',true)');
+setNode(44, 1, 2,  'table', 'TABLES', 'javascript:ins(\'INFORMATION_SCHEMA.TABLES\',true)');
+setNode(45, 1, 2,  'table', 'TABLE_CONSTRAINTS', 'javascript:ins(\'INFORMATION_SCHEMA.TABLE_CONSTRAINTS\',true)');
+setNode(46, 1, 2,  'table', 'TABLE_PRIVILEGES', 'javascript:ins(\'INFORMATION_SCHEMA.TABLE_PRIVILEGES\',true)');
+setNode(47, 1, 2,  'table', 'TABLE_TYPES', 'javascript:ins(\'INFORMATION_SCHEMA.TABLE_TYPES\',true)');
+setNode(48, 1, 2,  'table', 'TRIGGERS', 'javascript:ins(\'INFORMATION_SCHEMA.TRIGGERS\',true)');
+setNode(49, 1, 2,  'table', 'TYPE_INFO', 'javascript:ins(\'INFORMATION_SCHEMA.TYPE_INFO\',true)');
+setNode(50, 1, 2,  'table', 'USERS', 'javascript:ins(\'INFORMATION_SCHEMA.USERS\',true)');
+setNode(51, 1, 2,  'table', 'VIEWS', 'javascript:ins(\'INFORMATION_SCHEMA.VIEWS\',true)');
+setNode(52, 0, 1, 'users', 'Users', null);
+setNode(53, 1, 1, 'user', 'SA', null);
+setNode(54, 2, 2, 'type', 'Admin', null);
+setNode(55, 0, 0, 'info', 'H2 1.4.197 (2018-03-18)', null);
+refreshQueryTables();
+//-->
+</script>
+
+</head>
+<body marginwidth="0" marginheight="0">
+
+<div class="tree">
+<script type="text/javascript">
+<!--
+writeTree();
+//-->
+</script><img src="./tree_database.gif">&nbsp;jdbc:h2:tcp://localhost:9092/project<br><img onclick="hit(1);" id="join1" src="./tree_plus.gif"><img src="./tree_table.gif">&nbsp;<a id="PRODUCT" href="javascript:ins(&#39;PRODUCT&#39;,true)">PRODUCT</a><br><div id="div1" style="display: none;"><img src="./tree_empty.gif"><img onclick="hit(2);" id="join2" src="./tree_plus.gif"><img src="./tree_column.gif">&nbsp;<a id="ID" href="javascript:ins(&#39;ID&#39;)">ID</a><br><div id="div2" style="display: none;"><img src="./tree_empty.gif"><img src="./tree_empty.gif"><img src="./tree_type.gif">&nbsp;INTEGER(10) NOT NULL<br></div><img src="./tree_empty.gif"><img onclick="hit(4);" id="join4" src="./tree_plus.gif"><img src="./tree_column.gif">&nbsp;<a id="NAME" href="javascript:ins(&#39;NAME&#39;)">NAME</a><br><div id="div4" style="display: none;"><img src="./tree_empty.gif"><img src="./tree_empty.gif"><img src="./tree_type.gif">&nbsp;VARCHAR(50) NOT NULL<br></div><img src="./tree_empty.gif"><img onclick="hit(6);" id="join6" src="./tree_plus.gif"><img src="./tree_column.gif">&nbsp;<a id="DESCRIPTION" href="javascript:ins(&#39;DESCRIPTION&#39;)">DESCRIPTION</a><br><div id="div6" style="display: none;"><img src="./tree_empty.gif"><img src="./tree_empty.gif"><img src="./tree_type.gif">&nbsp;VARCHAR(100) NOT NULL<br></div><img src="./tree_empty.gif"><img onclick="hit(8);" id="join8" src="./tree_plus.gif"><img src="./tree_column.gif">&nbsp;<a id="PRICE" href="javascript:ins(&#39;PRICE&#39;)">PRICE</a><br><div id="div8" style="display: none;"><img src="./tree_empty.gif"><img src="./tree_empty.gif"><img src="./tree_type.gif">&nbsp;DECIMAL(10, 2) NOT NULL<br></div><img src="./tree_empty.gif"><img onclick="hit(10);" id="join10" src="./tree_plus.gif"><img src="./tree_column.gif">&nbsp;<a id="STOCK" href="javascript:ins(&#39;STOCK&#39;)">STOCK</a><br><div id="div10" style="display: none;"><img src="./tree_empty.gif"><img src="./tree_empty.gif"><img src="./tree_type.gif">&nbsp;INTEGER(10) NOT NULL<br></div><img src="./tree_empty.gif"><img onclick="hit(12);" id="join12" src="./tree_plus.gif"><img src="./tree_column.gif">&nbsp;<a id="CATEGORIES" href="javascript:ins(&#39;CATEGORIES&#39;)">CATEGORIES</a><br><div id="div12" style="display: none;"><img src="./tree_empty.gif"><img src="./tree_empty.gif"><img src="./tree_type.gif">&nbsp;VARCHAR(50) NOT NULL<br></div><img src="./tree_empty.gif"><img onclick="hit(14);" id="join14" src="./tree_plus.gif"><img src="./tree_index_az.gif">&nbsp;Indexes<br><div id="div14" style="display: none;"><img src="./tree_empty.gif"><img src="./tree_empty.gif"><img onclick="hit(15);" id="join15" src="./tree_plus.gif"><img src="./tree_index.gif">&nbsp;PRIMARY_KEY_E<br><div id="div15" style="display: none;"><img src="./tree_empty.gif"><img src="./tree_empty.gif"><img src="./tree_empty.gif"><img src="./tree_type.gif">&nbsp;Unique<br><img src="./tree_empty.gif"><img src="./tree_empty.gif"><img src="./tree_empty.gif"><img src="./tree_type.gif">&nbsp;ID<br></div></div></div><img onclick="hit(18);" id="join18" src="./tree_plus.gif"><img src="./tree_folder.gif">&nbsp;INFORMATION_SCHEMA<br><div id="div18" style="display: none;"><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="CATALOGS" href="javascript:ins(&#39;INFORMATION_SCHEMA.CATALOGS&#39;,true)">CATALOGS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="COLLATIONS" href="javascript:ins(&#39;INFORMATION_SCHEMA.COLLATIONS&#39;,true)">COLLATIONS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="COLUMNS" href="javascript:ins(&#39;INFORMATION_SCHEMA.COLUMNS&#39;,true)">COLUMNS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="COLUMN_PRIVILEGES" href="javascript:ins(&#39;INFORMATION_SCHEMA.COLUMN_PRIVILEGES&#39;,true)">COLUMN_PRIVILEGES</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="CONSTANTS" href="javascript:ins(&#39;INFORMATION_SCHEMA.CONSTANTS&#39;,true)">CONSTANTS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="CONSTRAINTS" href="javascript:ins(&#39;INFORMATION_SCHEMA.CONSTRAINTS&#39;,true)">CONSTRAINTS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="CROSS_REFERENCES" href="javascript:ins(&#39;INFORMATION_SCHEMA.CROSS_REFERENCES&#39;,true)">CROSS_REFERENCES</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="DOMAINS" href="javascript:ins(&#39;INFORMATION_SCHEMA.DOMAINS&#39;,true)">DOMAINS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="FUNCTION_ALIASES" href="javascript:ins(&#39;INFORMATION_SCHEMA.FUNCTION_ALIASES&#39;,true)">FUNCTION_ALIASES</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="FUNCTION_COLUMNS" href="javascript:ins(&#39;INFORMATION_SCHEMA.FUNCTION_COLUMNS&#39;,true)">FUNCTION_COLUMNS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="HELP" href="javascript:ins(&#39;INFORMATION_SCHEMA.HELP&#39;,true)">HELP</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="INDEXES" href="javascript:ins(&#39;INFORMATION_SCHEMA.INDEXES&#39;,true)">INDEXES</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="IN_DOUBT" href="javascript:ins(&#39;INFORMATION_SCHEMA.IN_DOUBT&#39;,true)">IN_DOUBT</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="KEY_COLUMN_USAGE" href="javascript:ins(&#39;INFORMATION_SCHEMA.KEY_COLUMN_USAGE&#39;,true)">KEY_COLUMN_USAGE</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="LOCKS" href="javascript:ins(&#39;INFORMATION_SCHEMA.LOCKS&#39;,true)">LOCKS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="QUERY_STATISTICS" href="javascript:ins(&#39;INFORMATION_SCHEMA.QUERY_STATISTICS&#39;,true)">QUERY_STATISTICS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="REFERENTIAL_CONSTRAINTS" href="javascript:ins(&#39;INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS&#39;,true)">REFERENTIAL_CONSTRAINTS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="RIGHTS" href="javascript:ins(&#39;INFORMATION_SCHEMA.RIGHTS&#39;,true)">RIGHTS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="ROLES" href="javascript:ins(&#39;INFORMATION_SCHEMA.ROLES&#39;,true)">ROLES</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="SCHEMATA" href="javascript:ins(&#39;INFORMATION_SCHEMA.SCHEMATA&#39;,true)">SCHEMATA</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="SEQUENCES" href="javascript:ins(&#39;INFORMATION_SCHEMA.SEQUENCES&#39;,true)">SEQUENCES</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="SESSIONS" href="javascript:ins(&#39;INFORMATION_SCHEMA.SESSIONS&#39;,true)">SESSIONS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="SESSION_STATE" href="javascript:ins(&#39;INFORMATION_SCHEMA.SESSION_STATE&#39;,true)">SESSION_STATE</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="SETTINGS" href="javascript:ins(&#39;INFORMATION_SCHEMA.SETTINGS&#39;,true)">SETTINGS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="SYNONYMS" href="javascript:ins(&#39;INFORMATION_SCHEMA.SYNONYMS&#39;,true)">SYNONYMS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="TABLES" href="javascript:ins(&#39;INFORMATION_SCHEMA.TABLES&#39;,true)">TABLES</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="TABLE_CONSTRAINTS" href="javascript:ins(&#39;INFORMATION_SCHEMA.TABLE_CONSTRAINTS&#39;,true)">TABLE_CONSTRAINTS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="TABLE_PRIVILEGES" href="javascript:ins(&#39;INFORMATION_SCHEMA.TABLE_PRIVILEGES&#39;,true)">TABLE_PRIVILEGES</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="TABLE_TYPES" href="javascript:ins(&#39;INFORMATION_SCHEMA.TABLE_TYPES&#39;,true)">TABLE_TYPES</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="TRIGGERS" href="javascript:ins(&#39;INFORMATION_SCHEMA.TRIGGERS&#39;,true)">TRIGGERS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="TYPE_INFO" href="javascript:ins(&#39;INFORMATION_SCHEMA.TYPE_INFO&#39;,true)">TYPE_INFO</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="USERS" href="javascript:ins(&#39;INFORMATION_SCHEMA.USERS&#39;,true)">USERS</a><br><img src="./tree_empty.gif"><img src="./tree_table.gif">&nbsp;<a id="VIEWS" href="javascript:ins(&#39;INFORMATION_SCHEMA.VIEWS&#39;,true)">VIEWS</a><br></div><img onclick="hit(52);" id="join52" src="./tree_plus.gif"><img src="./tree_users.gif">&nbsp;Users<br><div id="div52" style="display: none;"><img src="./tree_empty.gif"><img onclick="hit(53);" id="join53" src="./tree_plus.gif"><img src="./tree_user.gif">&nbsp;SA<br><div id="div53" style="display: none;"><img src="./tree_empty.gif"><img src="./tree_empty.gif"><img src="./tree_type.gif">&nbsp;Admin<br></div></div><img src="./tree_info.gif">&nbsp;H2 1.4.197 (2018-03-18)<br>
+</div>
+
+<p class="error">
+    
+</p>
+
+
+
+</body></html>

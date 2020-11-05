@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8080/ -->
+<html ng-app="ShoppingApp" class="ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+        <title>TODO supply a title</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="./TODO supply a title_files/angular.min.js"></script>
+        <script src="./TODO supply a title_files/angular-resource.min.js"></script>
+        <script src="./TODO supply a title_files/ngStorage.min.js"></script>
+        <script src="./TODO supply a title_files/shopping.js"></script>
+        <link rel="stylesheet" type="text/css" href="./TODO supply a title_files/style.css">
+    </head>
+    <body ng-controller="ProductController as prodCtrl" class="ng-scope"> 
+    <!-- ngInclude: 'menu.html' --><div ng-include="&#39;menu.html&#39;" class="ng-scope">
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+        <div id="menu" ng-controller="CustomerController as custCtrl" ng-init="custCtrl.checkSignIn()" class="ng-scope">
+            <div id="welcome" class="ng-binding"></div>
+            <a href="http://localhost:8080/">Home</a>
+            <!-- ngIf: custCtrl.signedIn -->
+            <!-- ngIf: custCtrl.signedIn -->
+            <!-- ngIf: custCtrl.signedIn -->
+            <!-- ngIf: !custCtrl.signedIn --><a href="http://localhost:8080/sign_in.html" ng-if="!custCtrl.signedIn" class="ng-scope">Sign In</a><!-- end ngIf: !custCtrl.signedIn -->
+        </div>
+
+</div>
+        <h1>Doohickies and Widgets Shop</h1>
+        <div class="author">Welcome To The</div>
+        <div class="date">Welcome To The</div>
+    
+
+</body></html>

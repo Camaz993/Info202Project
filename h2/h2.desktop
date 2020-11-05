@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=H2 Database
+Exec=./h2-linux.sh
+Terminal=false
+Type=Application
+Icon=ooo-base
